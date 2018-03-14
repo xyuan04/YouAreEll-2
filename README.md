@@ -49,7 +49,7 @@ Be prepared to defend your choice if which HTTP client library you chose, with r
 You should also create some unit tests for your REST API handlers.
 
 It's possible you may also need to understand some of what the Jackson package does for you. 
-* jackson json 
+* jackson json https://github.com/FasterXML/jackson
 
 ## IDs
 
