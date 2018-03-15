@@ -8,7 +8,7 @@
 You are to write a command interpreter using the provided SimpleShell class. You're going to create a way for 
 commands to be typed into your shell, read the typed commands and arguments, send them off to the Under-A-Rock 
 server using a REST API over the HTTP protocol, read the JSON data returned from the URL call, and print it out 
-nicely formatted for your user. 
+nicely formatted for your user. If you manage to get this all done in a reasonable time, attempt parts 2 and 3.
 
 Under-A-Rock acts a little (very little) like a twitter server or chat server. 
 
@@ -49,7 +49,14 @@ Be prepared to defend your choice if which HTTP client library you chose, with r
 You should also create some unit tests for your REST API handlers.
 
 It's possible you may also need to understand some of what the Jackson package does for you. 
+
 * jackson json https://github.com/FasterXML/jackson
+
+And you may wish to create a couple classes `public class Message` and `public class Id` to make handling
+the abstractions implied by the API easier.
+
+Jackson can help you parse the json into objects,and objects back into JSON strings. Be sure to research how you can
+dependencies in the `pom.xml` so that Jackson, well, so that you can use Jackson in the project.
 
 ## IDs
 
@@ -158,5 +165,19 @@ send xt0fer 'Hello old buddy!' to torvalds
    }
  ```
 and send it as the body of a POST request to  `http://zipcode.rocks:8085/ids/xt0fer/messages/`
+
+## Part Two
+
+What's that ProcessBuilder stuff about? In the SimpleShell class, take a look. How can that be used
+as a pattern to use threads to make the API calls and wait for the response? Maybe launch a new thread on every request?
+
+## Part Three
+
+Build a better set of commands. Make the "fromid" intrinsic, so it isn't needed on the various shell commands.
+Add a feature where you can send messages by someone's name. Create a means where the client watches the server for 
+any private messages to you and only prints them once. 
+Add another command that watches the global stream and only prints messages once.
+
+
 
 

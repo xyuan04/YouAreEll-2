@@ -7,6 +7,11 @@ import java.util.List;
 
 public class SimpleShell {
 
+
+    public static void prettyPrint(String output) {
+        // yep, make an effort to format things nicely, eh?
+        System.out.println(output);
+    }
     public static void main(String[] args) throws java.io.IOException {
 
         YouAreEll webber = new YouAreEll();
@@ -56,14 +61,14 @@ public class SimpleShell {
                 // ids
                 if (list.contains("ids")) {
                     String results = webber.get_ids();
-                    System.out.println(results);
+                    SimpleShell.prettyPrint(results);
                     continue;
                 }
 
                 // messages
                 if (list.contains("messages")) {
                     String results = webber.get_messages();
-                    System.out.println(results);
+                    SimpleShell.prettyPrint(results);
                     continue;
                 }
                 // you need to add a bunch more.
