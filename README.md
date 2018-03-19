@@ -46,9 +46,11 @@ HttpURLConnection https://docs.oracle.com/javase/8/docs/api/java/net/HttpURLConn
 * Square's OKHttp https://github.com/square/okhttp
 
 Be prepared to defend your choice if which HTTP client library you chose, with reasons why you chose it.
-You should also create some unit tests for your REST API handlers.
+You should also create some unit tests for your REST API handlers. You should look at how ItelliJ does management of
+dependencies. (You'll be modifying the `pom.xml` file.) Usually, you merely need to add a `dependency` clause to the `dependencies`
+clause in the pom.xml. 
 
-It's possible you may also need to understand some of what the Jackson package does for you. 
+It's possible you may also need to understand some of what the Jackson package does for you. `jackson` will also need to be inserted into the `pom.xml` file, with a dependency clause.
 
 * jackson json https://github.com/FasterXML/jackson
 
