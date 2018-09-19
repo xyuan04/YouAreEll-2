@@ -76,7 +76,7 @@ json payload for /ids/ - this is a sample
 {
     "userid": "-", // gets filled w id
     "name": "Kris",
-    "githubid": "xt0fer"
+    "github": "xt0fer"
 }
 ```
  
@@ -87,7 +87,7 @@ If I type `cmd? ids Kris xt0fer` into the shell, your command processor creates 
  {
      "userid": "-", // gets filled w id
      "name": "Kris",
-     "githubid": "xt0fer"
+     "github": "xt0fer"
  }
  ```
 and send it as the body of a POST request to  `http://zipcode.rocks:8085/ids/`
