@@ -57,6 +57,7 @@ specific command.
 
 * It's possible you may also need to understand some of what the [Jackson package](https://github.com/FasterXML/jackson) does.
 
+* You might like this too : https://www.pluralsight.com/courses/rest-fundamentals
 ## IDs
 
 #### ID commands in shell
