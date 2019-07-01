@@ -9,8 +9,9 @@ import java.util.List;
 
 import controllers.IdController;
 import controllers.MessageController;
+import youareell.YouAreEll;
 
-// Simple Shell is a Console view for YouAreEll.
+// Simple Shell is a Console view for youareell.YouAreEll.
 public class SimpleShell {
 
 
