@@ -4,6 +4,8 @@
 
 You'll write a Client to exchange JSON data over HTTP with a Server, in this case, the UnderARock(TM) server. Get POSTMAN, the app, you need it. https://www.getpostman.com/
 
+a little article on [ModelViewController](https://www.geeksforgeeks.org/mvc-design-pattern/)
+
 ### The Point
 
 * You are to write a command interpreter using the provided `SimpleShell` class.
