@@ -1,10 +1,13 @@
 package controllers;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import models.Id;
 
 public class IdController {
+    private HashMap<String, Id> allIds;
+
     Id myId;
 
     public ArrayList<Id> getIds() {
