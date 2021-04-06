@@ -3,7 +3,7 @@ package views;
 import models.Message;
 
 public class MessageTextView {
-    public static String toAString(Message m) {
+    public String toString(Message m) {
         return m.toString();
     } 
 }

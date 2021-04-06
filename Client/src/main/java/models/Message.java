@@ -39,7 +39,7 @@ public class Message implements Comparable {
     }
 
     public int compareTo(Object o) {
-        return this.seqId.compareTo((Message o).getSeqId());
+        return this.seqId.compareTo(((Message) o).getSeqId());
     }
 
     public String getMessage() {
