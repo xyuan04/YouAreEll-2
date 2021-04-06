@@ -3,11 +3,7 @@ package views;
 import models.Message;
 
 public class MessageTextView {
-
-    public MessageTextView(Message msgToDisplay) {
-
-    }
-    @Override public String toString() {
-        return null;
+    @Override public static String toString(Message m) {
+        return m.toString()
     } 
 }

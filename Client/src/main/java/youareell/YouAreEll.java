@@ -4,31 +4,29 @@ import controllers.*;
 
 public class YouAreEll {
 
-    private MessageController msgCtrl;
-    private IdController idCtrl;
+    TransactionController tt;
 
-    public YouAreEll (MessageController m, IdController j) {
-        // used j because i seems awkward
-        this.msgCtrl = m;
-        this.idCtrl = j;
+    public YouAreEll (TransactionController t) {
+        this.tt = t;
     }
 
     public static void main(String[] args) {
         // hmm: is this Dependency Injection?
-        YouAreEll urlhandler = new YouAreEll(new MessageController(), new IdController());
+        YouAreEll urlhandler = new YouAreEll(
+            new TransactionController(
+                new MessageController(), new IdController()
+        ));
         System.out.println(urlhandler.MakeURLCall("/ids", "GET", ""));
         System.out.println(urlhandler.MakeURLCall("/messages", "GET", ""));
     }
 
     public String get_ids() {
-        return MakeURLCall("/ids", "GET", "");
+        return tt.makecall("/ids", "GET", "");
     }
 
     public String get_messages() {
         return MakeURLCall("/messages", "GET", "");
     }
 
-    public String MakeURLCall(String mainurl, String method, String jpayload) {
-        return "nada";
-    }
+
 }

@@ -12,6 +12,10 @@ public class IdController {
     }
 
     public Id postId(Id id) {
+        // create json from id
+        // call server, get json result Or error
+        // result json to Id obj
+
         return null;
     }
 
